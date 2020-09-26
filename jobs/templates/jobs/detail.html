@@ -50,40 +50,20 @@
   </head>
   <body>
     <main role="main">
-    <section class="jumbotron text-center">
-        <div class="container">
-        <img src="{% static 'me.jpg' %}" height = 300 id="profile"></img>
-        <br/><br/>
-        <h1>Hongjo Lim</h1>
-        <br/>
-        <p class="lead text-muted">.NET, C#, Android, Python Developer</p>
-        <p>
-            <a href="mailto:hongjo1988@gmail.com" class="btn btn-primary my-2">Email Me</a>
-        </p>
-        </div>
-    </section>
-
-    <div class="album py-5 bg-light">
-        <div class="container">
-
-            <div class="row">
-              {% for job in jobs.all %}
-                <div class="col-md-4">
-                  <a href="{% url 'job_detail' job.id %}">
-                  <div class="card mb-4 shadow-sm">
-                    <img src = "{{ job.image.url }}" height=225/>
-                    <div class="card-body">
-                    <p class="card-text">{{ job.title }}</p>
-                    <p class="card-text">{{ job.company }}</p>
-                    </div>
-                  </div>
-                </a>
+        <section class="jumbotron text-center">
+            <div class="container">
+            <h1>{{ job.title }}</h1>
+            <br/>
+            <h3 class="lead text-muted">{{ job.company }}</h3>
+            <br/>
+            <p class="lead text-muted">{{ job.detail }}</p>
+            <img src="{{ job.image.url }}" height=300/>
+            <br/><br/>
+            <p>
+                <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
+            </p>
             </div>
-
-            {% endfor %}
-
-        </div>
-    </div>
+        </section>
 
     </main>
 
