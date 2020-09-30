@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'nz5ab*#6z*cvo6o68*%!irv78vdm&yys%wh4xiq-^k&878*)l%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shrouded-lake-54690.herokuapp.com'] # add the custom domain
 
 
 # Application definition
